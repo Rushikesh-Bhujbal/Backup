@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateUniqueCodeStudent", "Mmc_Plugin_Development\GenerateUniqueCodeStudent.csproj", "{CF0F931A-DB3B-47C3-90AD-4D19006FD4E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentDeActivation", "StudentDeActivation\StudentDeActivation.csproj", "{29024BA1-0DA6-4F29-8ED5-B012E544588B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PramoteClass", "PramoteClass\PramoteClass.csproj", "{57CF1D26-98EA-4A31-87BA-39DD618EE014}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalData", "LocalData\LocalData.csproj", "{48490C84-8B01-49C5-83F3-A4EB0CBEFB28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportDailyAttendance", "ImportDailyAttendance\ImportDailyAttendance.csproj", "{D2409C1B-B4EC-43FD-9422-AB783FC0FA6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetRecordOwner", "..\..\..\..\Documents\Visual Studio 2013\Projects\AssigningOwnershipToBUuser\AssigningOwnershipToBUuser\SetRecordOwner.csproj", "{A41B0454-BFEA-4A48-92BA-CCE71B192DB3}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 1
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://pramoddhokane.visualstudio.com/defaultcollection
+		SccProjectUniqueName0 = ImportDailyAttendance\\ImportDailyAttendance.csproj
+		SccProjectName0 = ImportDailyAttendance
+		SccAuxPath0 = https://pramoddhokane.visualstudio.com/defaultcollection
+		SccLocalPath0 = ImportDailyAttendance
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF0F931A-DB3B-47C3-90AD-4D19006FD4E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF0F931A-DB3B-47C3-90AD-4D19006FD4E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF0F931A-DB3B-47C3-90AD-4D19006FD4E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF0F931A-DB3B-47C3-90AD-4D19006FD4E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29024BA1-0DA6-4F29-8ED5-B012E544588B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29024BA1-0DA6-4F29-8ED5-B012E544588B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29024BA1-0DA6-4F29-8ED5-B012E544588B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29024BA1-0DA6-4F29-8ED5-B012E544588B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57CF1D26-98EA-4A31-87BA-39DD618EE014}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57CF1D26-98EA-4A31-87BA-39DD618EE014}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57CF1D26-98EA-4A31-87BA-39DD618EE014}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57CF1D26-98EA-4A31-87BA-39DD618EE014}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48490C84-8B01-49C5-83F3-A4EB0CBEFB28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48490C84-8B01-49C5-83F3-A4EB0CBEFB28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48490C84-8B01-49C5-83F3-A4EB0CBEFB28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48490C84-8B01-49C5-83F3-A4EB0CBEFB28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2409C1B-B4EC-43FD-9422-AB783FC0FA6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2409C1B-B4EC-43FD-9422-AB783FC0FA6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2409C1B-B4EC-43FD-9422-AB783FC0FA6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2409C1B-B4EC-43FD-9422-AB783FC0FA6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A41B0454-BFEA-4A48-92BA-CCE71B192DB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A41B0454-BFEA-4A48-92BA-CCE71B192DB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A41B0454-BFEA-4A48-92BA-CCE71B192DB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A41B0454-BFEA-4A48-92BA-CCE71B192DB3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

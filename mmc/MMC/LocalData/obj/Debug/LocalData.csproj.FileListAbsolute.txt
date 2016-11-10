@@ -1,0 +1,5 @@
+D:\CRM\MMC\LocalData\bin\Debug\LocalData.dll
+D:\CRM\MMC\LocalData\bin\Debug\LocalData.pdb
+D:\CRM\MMC\LocalData\obj\Debug\LocalData.csprojResolveAssemblyReference.cache
+D:\CRM\MMC\LocalData\obj\Debug\LocalData.dll
+D:\CRM\MMC\LocalData\obj\Debug\LocalData.pdb

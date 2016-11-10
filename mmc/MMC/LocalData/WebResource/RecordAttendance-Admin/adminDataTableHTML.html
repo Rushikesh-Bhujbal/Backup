@@ -1,0 +1,313 @@
+<html>
+
+<head>
+
+
+    <link href="new_bootstrapCSS" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.0.1/css/bootstrap3/bootstrap-switch.css" rel="stylesheet" type="text/css">
+    <link href="new_JQuery_DataTable.css" rel="stylesheet" type="text/css">
+    <link href="new_DatePickerCSS" rel="stylesheet" type="text/css">
+    <link href="https://cdn.datatables.net/buttons/1.1.2/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.css" rel="stylesheet">
+    <style>
+        button.btn.dropdown-toggle.selectpicker.btn-default {
+            background-color: transparent;
+        }
+
+        button.btn.dropdown-toggle.selectpicker.btn-default {
+            /* color: black; */
+            border-bottom-color: #FF9933;
+            border-top-color: transparent;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-bottom-left-radius: 1px;
+            border-bottom-right-radius: 1px;
+        }
+
+        .btn-group.open .dropdown-toggle {
+            /* -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125); */
+            box-shadow: none;
+        }
+
+        .btn-group .dropdown-toggle:focus {
+            /* -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125); */
+            box-shadow: none;
+            border: 0px;
+        }
+
+        input#date {
+            border-bottom-color: #FF9933;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-top-color: transparent;
+            border-width: thin;
+        }
+
+        .dataTables_wrapper.no-footer .dataTables_scrollBody {
+            border-bottom: 1px solid #111;
+            border-left: 1px solid;
+            border-right: 1px solid;
+        }
+    </style>
+    <style>
+        .loading {
+            /*position: absolute;
+            top: 50%;
+            left: 50%;*/
+            margin-top: 20px;
+        }
+
+        .loading-bar {
+            display: inline-block;
+            width: 4px;
+            height: 18px;
+            border-radius: 4px;
+            animation: loading 1s ease-in-out infinite;
+        }
+
+            .loading-bar:nth-child(1) {
+                background-color: #3498db;
+                animation-delay: 0;
+            }
+
+            .loading-bar:nth-child(2) {
+                background-color: #c0392b;
+                animation-delay: 0.09s;
+            }
+
+            .loading-bar:nth-child(3) {
+                background-color: #f1c40f;
+                animation-delay: .18s;
+            }
+
+            .loading-bar:nth-child(4) {
+                background-color: #27ae60;
+                animation-delay: .27s;
+            }
+
+        @keyframes loading {
+            0% {
+                transform: scale(1);
+            }
+
+            20% {
+                transform: scale(1, 2.2);
+            }
+
+            40% {
+                transform: scale(1);
+            }
+        }
+
+
+        .btn-group.bootstrap-select {
+            width: 100% !important;
+        }
+
+            .btn-group.bootstrap-select button {
+                padding-left: 0px !important;
+            }
+
+        select#centers {
+            width: 100%;
+            border: 0px;
+            padding: 3px 0;
+            border-bottom: 1px solid #FF9933;
+        }
+
+        input.datepicker-here {
+            width: 100%;
+        }
+    </style>
+    <style>
+        .signal {
+            border: 5px solid #333;
+            border-radius: 30px;
+            height: 20px;
+            width: 20px;
+            opacity: 0;
+            animation: pulsate 1s ease-out;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes pulsate {
+            0% {
+                transform: scale(.1);
+                opacity: 0.0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1.2);
+                opacity: 0;
+            }
+        }
+    </style>
+
+
+
+    <script src="new_JQuery_1.11.3.js"></script>
+    <script src="new_bootstrapJS" type="text/javascript"></script>
+    <script src="new_JQuery_DataTable.js" type="text/javascript"></script>
+    <script src="new_DatePickerJS" type="text/javascript"></script>
+    <script src="new_DatePickerDependencyJS" type="text/javascript"></script>
+    <script src="new_LoaderJS" type="text/javascript"></script>
+    <script src="new_LodashJS" type="text/javascript"></script>
+
+
+    <script src="https://cdn.datatables.net/buttons/1.1.2/js/dataTables.buttons.min.js" type="text/javascript"></script>
+    <script src="https://cdn.datatables.net/buttons/1.1.2/js/buttons.flash.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js" type="text/javascript"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js" type="text/javascript"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js" type="text/javascript"></script>
+    <script src="https://cdn.datatables.net/buttons/1.1.2/js/buttons.html5.min.js" type="text/javascript"></script>
+    <script src="https://cdn.datatables.net/buttons/1.1.2/js/buttons.print.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.0.1/js/bootstrap-switch.js" type="text/javascript"></script>
+    <script src="https://eternusrnd.crm5.dynamics.com//WebResources/new_DailyAttendanceForMainAdminJS" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.js" type="text/javascript"></script>
+
+    <script>
+        var datePickerDate = new Date();
+        var table, rowindex;
+        $(document).ready(function () {
+            $("#loaderdiv").hide();
+
+            $('#classes').selectpicker({
+                size: 6
+            });
+
+            $('#date').datepicker({
+                maxDate: new Date()
+            });
+
+            table = $('#sampleDatatable').dataTable({
+                aaSorting: [[1, "asc"]],
+                dom: 'Bfrtip',
+                buttons: [{
+                    extend: 'csvHtml5',
+                    text: '<i style="color:green" class="fa fa-file-excel-o"></i>&nbsp;&nbsp;Data Export',
+                    title: 'Data Export',
+                    titleAttr: 'Export to Excel File'
+                }],
+                sScrollY: "300px",
+                paging: false,
+                "oLanguage": {
+                    "sSearch": "Filter :"
+                },
+                "columnDefs": [{
+                    "type": "date",
+                    "targets": [0],
+                    "visible": false,
+                    "searchable": false
+                }] //"bPaginate": false
+            });
+            $('#sampleDatatable tbody').on('click', 'td', function () {
+                var tr = $(this).closest("tr");
+                rowindex = tr.index();
+            });
+            $('#date').datepicker({
+                onSelect: function (selectedDate, selectedDateObject) {
+                    // $('#sampleDatatable').dataTable().fnClearTable();
+                    //  getDailyAttendanceForSelectedDate(selectedDateObject)
+                    datePickerDate = selectedDateObject;
+                }
+            });
+
+            toastr.options = {
+                "closeButton": false,
+                "debug": true,
+                "newestOnTop": true,
+                "progressBar": false,
+                "positionClass": "toast-bottom-right",
+                "preventDuplicates": true,
+                "onclick": null,
+                "showDuration": "100",
+                "hideDuration": "100",
+                "timeOut": "300",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+        });
+    </script>
+    <style>
+        th {
+            font-family: Segoe\000020UI, Tahoma, Arial;
+            font-size: small;
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta>
+    <meta>
+</head>
+
+<body style="word-wrap: break-word;" onload="getAllCenters()">
+    <span style="font-family: undefined;">
+
+        <span>
+            <div class="container style-top table-striped" id="DatablesPage" style="height: 350px; font-family: undefined; margin-top: 6px;">
+                <h3 style="font-family: Segoe UI, Arial, sans-serif; font-size: 24px; font-weight: lighter; margin-bottom:20px;">Admin Attendance Sheet</h3>
+                <div class="row">
+                    <div class="col-md-3">
+                        <label style="font-size: 17px; color: #FF4F00;margin-bottom:12px">Date</label>
+                        <div style="margin-top:-7px;margin-bottom:15px">
+                            <input class="datepicker-here" id="date" type="text" data-language="en">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label style="font-size: 17px; color: #FF4F00;-left:11px;margin-bottom:-6px">Center</label>
+                        <div>
+                            <select id="centers"></select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label style="font-size: 17px; color: #FF4F00;">Class</label>
+                        <div style="margin-top:-10px">
+                            <select id="classes">
+                                <option value="100000000" selected="">Creche</option>
+                                <option value="100000001">Balwadi</option>
+                                <option value="100000002">Primary</option>
+                                <option value="100000003">Municipal School</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3" style="margin-top:18px">
+                        <button onclick="getDailyAttendanceForSelectedDate(datePickerDate);" class="btn btn-secondary" type="Submit">
+                            Show Attendance
+                        </button>
+                        <div id="loaderdiv" class="signal" style="display:inline-block;"></div>
+                    </div>
+
+
+                </div>
+                <!--   <select class="selectpicker" id="centerOptions">
+                   </select-->
+                <table class="display" id="sampleDatatable">
+                    <thead>
+                        <tr>
+                            <th class="btn-info">Date</th>
+                            <th class="btn-info">Student Code</th>
+                            <th class="btn-info">Name</th>
+                            <th class="btn-info">Morning</th>
+                            <th class="btn-info">Afternoon</th>
+                            <th class="btn-info">Reason</th>
+                        </tr>
+                    </thead>
+                    <tbody class="GuideStarData"></tbody>
+                </table>
+            </div>
+        </span>
+    </span>
+
+
+</body>
+</html>
